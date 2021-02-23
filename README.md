@@ -48,8 +48,9 @@ bash
 
 So if we build and run this container like this, ...
 
- `$> (sudo) docker build -t test_img . `
- `$> (sudo) docker run --name test_container -it -p 80:80 test_img`
+`$> (sudo) docker build -t test_img . `
+
+`$> (sudo) docker run --name test_container -it -p 80:80 test_img`
 
 ... as you can see, nginx has now started.
 If it has not, don't worry, it is probably because nginx was already running on your host machine, using port 80.
@@ -67,6 +68,7 @@ We will inspect how nginx is installed, and which directories are important for 
 Let's start by moving to the directory in which nginx is installed.
 
 ```$> cd /etc/nginx/```
+
 ```$> ls```
 
 You will see there are a couple things in there. We will take a look at nginx.conf file.
@@ -83,6 +85,7 @@ Apparently, nginx only takes the last line into account. In this case, include /
 So now that we know this, let's move to this location, and find out what is there.
 
 ```$> cd ./sites-enabled/```
+
 ```$> ls```
 
 There is a file called default. This file is the file currently being taken by nginx as configuration.
