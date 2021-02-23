@@ -15,6 +15,7 @@ In your ft_server project directory,
 2. ```$> sudo mkdir srcs```
 3. ```$> sudo touch ./srcs/nginx.conf```
 4. Now that you have these files/dirs, let's edit your Dockerfile :
+
 https://grafikart.fr/tutoriels/dockerfile-636 for FR video tutorial. Our Dockerfile in this step will be almost identical to this !
 https://takacsmark.com/dockerfile-tutorial-by-example-dockerfile-best-practices-2018/ for EN tutorial on Alpine distribution. There are many tips in there, and I suggest anyone to watch this if you can understand english.
 https://www.youtube.com/watch?v=XiGUu3q2Mwo this video explains various basic dockerfile commands, for those who want further explanations.
@@ -43,7 +44,7 @@ bash
 
 So if we build and run this container like this, ...
 
-`$> (sudo) docker build -t test_img . `\n
+`$> (sudo) docker build -t test_img . `
 `$> (sudo) docker run --name test_container -it -p 80:80 test_img`
 
 ... as you can see, nginx has now started.
