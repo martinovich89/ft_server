@@ -186,7 +186,7 @@ inside your container, and take the eth0 ipv4 adress.
 You should see your html page now. **VICTORY :)**
 
 Take note, that although this is working "just fine" , there could be many things to improve.
-For example, we just put nginx.conf into /etc/nginx/sites-enabled/ . But we could have put it into /etc/nginx/sites-available/ without replacing the "default" file, and then we could have created a symbolic link in the /etc/nginx/sites-enabled directory, removing the default symbolic link.
+For example, we just put nginx.conf into /etc/nginx/sites-enabled/ . But we could have put it into /etc/nginx/sites-available/ instead, and then would have created a symbolic link in the /etc/nginx/sites-enabled directory, removing the default symbolic link.
 Like this :
 
 `mv /tmp/nginx.conf /etc/nginx/sites-available/`
