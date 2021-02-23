@@ -2,7 +2,8 @@
 
 Hello everyone.
 
-I apologize for such a long README file, but I wanted to share what I would really have loved to know at the early stage of this project. Unfortunately, at some point, I ended up putting copied / pasted lines of codes to make things work, barely understanding why it worked that way.
+I apologize for such a long README file, but I wanted to share what I would really have loved to know at the early stage of this project. Unfortunately, at some point, I ended up putting copied / pasted lines of codes to make things work, barely understanding why it worked the way it did, at that time ...
+So, without further ado,
 
 # 1. Let's start it with docker / nginx
 So first things first.
@@ -20,7 +21,7 @@ In your ft_server project directory,
 
 Now that you have these files/dirs, let's edit your Dockerfile :
 
-https://grafikart.fr/tutoriels/dockerfile-636 for FR video tutorial. Our Dockerfile in this step will be almost identical to this !
+https://grafikart.fr/tutoriels/dockerfile-636 for FR video tutorial. Our Dockerfile in this step will be almost identical to this so I encourage anyone just look at what he did even without the sound !
 https://takacsmark.com/dockerfile-tutorial-by-example-dockerfile-best-practices-2018/ for EN tutorial on Alpine distribution. There are many tips in there, and I suggest anyone to watch this if you can understand english.
 https://www.youtube.com/watch?v=XiGUu3q2Mwo this video explains various basic dockerfile commands, for those who want further explanations.
 If you have watched all three videos, you will probably understand this :
