@@ -104,6 +104,10 @@ And here comes the step 2.
 For this step, we will need 2 more things. An .html file, and a custom nginx configuration file to find it.
 I recommend reading this : https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-debian-10
 
+So let's create an nginx.conf file
+
+`touch ./srcs/nginx.conf`
+
 the nginx file will look like this :
 
 **nginx.conf**
