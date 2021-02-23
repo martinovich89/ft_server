@@ -48,7 +48,8 @@ bash
 
 So if we build and run this container like this, ...
 
-`$> (sudo) docker build -t test_img .`
+`$> (sudo) docker build -t test_img . `
+
 `$> (sudo) docker run --name test_container -it -p 80:80 test_img`
 
 ... as you can see, nginx has now started.
