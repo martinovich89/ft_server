@@ -33,7 +33,8 @@ COPY srcs/init.sh /usr/bin/
 RUN chmod 755 /usr/bin/init.sh
 
 CMD ["init.sh"]
-\-------------------------------
+
+-------------------------------
 
 init.sh :
 
@@ -42,7 +43,8 @@ init.sh :
 
 service nginx start
 bash
-\--------------------------------
+
+--------------------------------
 
 So if we build and run this container like this, ...
 
