@@ -11,10 +11,14 @@ Today, I think the best way to start this project is to simply run a container w
 
 Let's have a step by step walkthrough:
 In your ft_server project directory,
-1. ```$> sudo touch Dockerfile```
-2. ```$> sudo mkdir srcs```
-3. ```$> sudo touch ./srcs/nginx.conf```
-4. Now that you have these files/dirs, let's edit your Dockerfile :
+
+```$> sudo touch Dockerfile```
+
+```$> sudo mkdir srcs```
+
+```$> sudo touch ./srcs/nginx.conf```
+
+Now that you have these files/dirs, let's edit your Dockerfile :
 
 https://grafikart.fr/tutoriels/dockerfile-636 for FR video tutorial. Our Dockerfile in this step will be almost identical to this !
 https://takacsmark.com/dockerfile-tutorial-by-example-dockerfile-best-practices-2018/ for EN tutorial on Alpine distribution. There are many tips in there, and I suggest anyone to watch this if you can understand english.
