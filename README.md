@@ -106,23 +106,25 @@ the nginx file will look like this :
 
 **nginx.conf**
 
-```server {```
+``
+server {
 
-    ```listen      80;```
+    listen      80;
 
-    ```server_name mysite;```
+    server_name mysite;
 
-    ```root        /var/www/mysite```
+    root        /var/www/mysite
 
-    ```index       index.html```
+    index       index.html
 
-    ```location {```
+    location {
 
-        ```try_files $uri $uri/ =404```
+        try_files $uri $uri/ =404
 
-    ```}```
+    }
 
-```}```
+}
+``
 
 Now we need to copy these files into the container. Let's edit the dockerfile.
 
