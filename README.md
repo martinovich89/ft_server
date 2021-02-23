@@ -112,13 +112,13 @@ the nginx file will look like this :
 
         server_name mysite;
 
-        root        /var/www/mysite
+        root        /var/www/mysite;
 
-        index       index.html
+        index       index.html;
 
         location / {
 
-                try_files $uri $uri/ =404
+                try_files $uri $uri/ =404;
 
         }
 
