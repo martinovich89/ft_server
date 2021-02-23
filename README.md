@@ -20,9 +20,8 @@ https://takacsmark.com/dockerfile-tutorial-by-example-dockerfile-best-practices-
 https://www.youtube.com/watch?v=XiGUu3q2Mwo this video explains various basic dockerfile commands, for those who want further explanations.
 If you have watched all three videos, you will probably understand this :
 
-Dockerfile :
+**Dockerfile :**
 
-------------------------------
 FROM debian
 
 RUN apt update && \
@@ -34,17 +33,13 @@ RUN chmod 755 /usr/bin/init.sh
 
 CMD ["init.sh"]
 
--------------------------------
 
-init.sh :
+**init.sh :**
 
---------------------------------
 #!/bin/sh
 
 service nginx start
 bash
-
---------------------------------
 
 So if we build and run this container like this, ...
 
@@ -92,5 +87,7 @@ There is a file called default. This file is the file currently being taken by n
 If you want to change the way nginx works, you probably want to change this file.
 
 And here comes the step 2.
+
+--------------------------------------
 
 # 2. Setting up nginx to 
