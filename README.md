@@ -16,7 +16,7 @@ In your ft_server project directory,
 
 ```$> sudo mkdir srcs```
 
-```$> sudo touch ./srcs/nginx.conf```
+```$> sudo touch ./srcs/init.sh```
 
 Now that you have these files/dirs, let's edit your Dockerfile :
 
