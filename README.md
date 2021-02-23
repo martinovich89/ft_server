@@ -22,8 +22,7 @@ If you have watched all three videos, you will probably understand this :
 
 Dockerfile :
 
-//++++++++++++++++//
-
+------------------------------
 FROM debian
 
 RUN apt update && \
@@ -34,19 +33,16 @@ COPY srcs/init.sh /usr/bin/
 RUN chmod 755 /usr/bin/init.sh
 
 CMD ["init.sh"]
-
-//----------------//
+\-------------------------------
 
 init.sh :
 
-//++++++++++++++++//
-
+--------------------------------
 #!/bin/sh
 
 service nginx start
 bash
-
-//----------------//
+\--------------------------------
 
 So if we build and run this container like this, ...
 
