@@ -140,7 +140,7 @@ Now we need to copy these files into the container. Let's edit the dockerfile.
 
 `RUN chmod 755 /usr/bin/init.sh`
 
-CMD ["init.sh"]
+`CMD ["init.sh"]`
 
 
 Of course, in order for nginx to find the root directory, it has to exist, and nginx must have access rights. We will write that in the script.
