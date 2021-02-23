@@ -106,7 +106,7 @@ the nginx file will look like this :
 
 **nginx.conf**
 
-``server {`
+`server {`
 
     listen      80;
 
@@ -122,7 +122,7 @@ the nginx file will look like this :
 
     }
 
-`}``
+`}`
 
 Now we need to copy these files into the container. Let's edit the dockerfile.
 
