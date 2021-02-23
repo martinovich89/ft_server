@@ -49,6 +49,7 @@ If you have watched all three videos, you will probably understand this :
 So if we build and run this container like this, ...
 
 `$> (sudo) docker build -t test_img . `
+
 `$> (sudo) docker run --name test_container -it -p 80:80 test_img`
 
 ... as you can see, nginx has now started.
@@ -108,12 +109,19 @@ the nginx file will look like this :
 ```server {```
 
 ```    listen      80;```
+
 ```    server_name mysite;```
+
 ```    root        /var/www/mysite```
+
 ```    index       index.html```
+
 ```    location {```
+
 ```        try_files $uri $uri/ =404```
+
 ```    }```
+
 ```}```
 
 Now we need to copy these files into the container. Let's edit the dockerfile.
