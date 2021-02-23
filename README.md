@@ -75,13 +75,15 @@ You will see there are a couple things in there. We will take a look at nginx.co
 ```$> cat nginx.conf```
 
 almost at the end of the file, you should see 2 lines starting with include ...
-include /etc/nginx/conf.d/\*.conf;
-include /etc/nginx/sites-enabled/\*;
+
+`include /etc/nginx/conf.d/*.conf;`
+
+`include /etc/nginx/sites-enabled/*;`
 
 These two directories, are the locations where nginx will look for configuration files.
 Apparently, nginx only takes the last line into account. In this case, include /etc/nginx/sites-enabled/*;
 
-So now that we know this, let's move to this location, and find out what is there.
+So now that we know this, let's move to this location, and find out what's up there.
 
 ```$> cd ./sites-enabled/```
 
@@ -94,4 +96,14 @@ And here comes the step 2.
 
 --------------------------------------
 
-# 2. Setting up nginx to 
+# 2. Setting up nginx to display an html page.
+
+For this step, we will need 2 more things. An .html file, and a custom nginx configuration file to find it.
+I recommend reading this : https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-debian-10
+
+the nginx file will look like this :
+
+server {
+    listen 80;
+    
+}
