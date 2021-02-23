@@ -103,7 +103,67 @@ I recommend reading this : https://www.digitalocean.com/community/tutorials/how-
 
 the nginx file will look like this :
 
-server {
-    listen 80;
-    
-}
+**nginx.conf**
+
+```server {```
+
+```    listen      80;```
+```    server_name mysite;```
+```    root        /var/www/mysite```
+```    index       index.html```
+```    location {```
+```        try_files $uri $uri/ =404```
+```    }```
+```}```
+
+Now we need to copy these files into the container. Let's edit the dockerfile.
+
+**Dockerfile**
+
+`FROM debian`
+
+`RUN apt update && apt install -y nginx`
+
+`COPY srcs/init.sh /usr/bin/`
+
+`COPY srcs/index.html /tmp/`
+
+`COPY srcs/nginx.conf /tmp/`
+
+`RUN chmod 755 /usr/bin/init.sh`
+
+CMD ["init.sh"]
+
+
+Of course, in order for nginx to find the root directory, it has to exist, and nginx must have access rights. We will write that in the script.
+Finally, we will ensure that the configuration file is in the right place.
+
+**init.sh**
+
+`mkdir -p /var/www/mysite` # we create the site / root directory. Of course, we could choose a totally different path, but we would have to update nginx.conf root instruction.
+
+`chown -R www-data /var/www/mysite` # now nginx (www-data is nginx username) owns mysite directory.
+
+`chmod -R 755 /var/www/mysite`  # we could set other rights. It depends what you want.
+
+`mv /tmp/index.html /var/www/mysite/` # we put the index.html file into root directory.
+
+`mv /tmp/nginx.conf /etc/nginx/sites-enabled/default` # this will overwrite the current configuration file, by taking the same name.
+
+`service nginx start`
+
+`bash`
+
+
+With all this set up, you can build and run your container with the same commands as above.
+If you see that nginx is up and running in your container, you can go to your web browser, and type your container ip as url.
+
+to get your container ip, type 
+
+`docker inspect test_container`
+
+from a terminal, or type
+
+`ifconfig`
+
+inside your container, and take the eth0 ipv4 adress.
