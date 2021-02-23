@@ -140,15 +140,15 @@ Finally, we will ensure that the configuration file is in the right place.
 
 **init.sh**
 
-`mkdir -p /var/www/mysite` # we create the site / root directory. Of course, we could choose a totally different path, but we would have to update nginx.conf root instruction.
+`mkdir -p /var/www/mysite`
 
-`chown -R www-data /var/www/mysite` # now nginx (www-data is nginx username) owns mysite directory.
+`chown -R www-data /var/www/mysite`
 
-`chmod -R 755 /var/www/mysite`  # we could set other rights. It depends what you want.
+`chmod -R 755 /var/www/mysite`
 
-`mv /tmp/index.html /var/www/mysite/` # we put the index.html file into root directory.
+`mv /tmp/index.html /var/www/mysite/`
 
-`mv /tmp/nginx.conf /etc/nginx/sites-enabled/default` # this will overwrite the current configuration file, by taking the same name.
+`mv /tmp/nginx.conf /etc/nginx/sites-enabled/default`
 
 `service nginx start`
 
