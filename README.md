@@ -116,7 +116,7 @@ the nginx file will look like this :
 
         index       index.html
 
-        location {
+        location / {
 
                 try_files $uri $uri/ =404
 
