@@ -3,14 +3,15 @@
 Hello everyone.
 
 I apologize for such a long README file, but I wanted to share what I would really have loved to know at the early stage of this project. Unfortunately, at some point, I ended up putting copied / pasted lines of codes to make things work, barely understanding why it worked the way it did, at that time ...
+Today, I really want to get you comfortably started with this project without too much hassle.
 So, without further ado,
 
 # 1. Let's start it with docker / nginx
 So first things first.
 
-Today, I think the best way to start this project is to simply run a container with the needed distribution and nginx, just to see how things are set inside.
+In retrospect, I think the best way to start this project is to simply run a container with the needed distribution and nginx, just to see how things are set inside.
 
-Let's have a step by step walkthrough:
+Let's have a step by step walkthrough :
 In your ft_server project directory,
 
 ```$> sudo touch Dockerfile```
@@ -64,7 +65,7 @@ Then try again, it should work properly, now.
 
 To check if everything is running right, just type localhost or your ip (ifconfig should get your ip for you) in your host's web browser. You should see "Welcome to nginx ... !". 
 
-So now, we are inside the container.
+So now, inside the container.
 We will inspect how nginx is installed, and which directories are important for us to make our wonderful ft_server project work.
 
 Let's start by moving to the directory in which nginx is installed.
@@ -84,7 +85,7 @@ almost at the end of the file, you should see 2 lines starting with include ...
 `include /etc/nginx/sites-enabled/*;`
 
 These two directories, are the locations where nginx will look for configuration files.
-Apparently, nginx only takes the last line into account. In this case, include /etc/nginx/sites-enabled/*;
+Apparently (seemed so while testing), nginx only takes the last line into account. In this case, include /etc/nginx/sites-enabled/*;
 
 So now that we know this, let's move to this location, and find out what's up there.
 
