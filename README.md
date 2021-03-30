@@ -62,6 +62,14 @@ To fix this, just stop nginx on your host machine like this
 ```$> (sudo) service nginx stop```
 
 Then try again, it should work properly, now.
+At some point, you might need to clear your docker images and containers.
+I used this kind of script for that purpose :
+
+`$> docker stop $(docker ps -qa)`
+
+`$> docker rm $(docker ps -qa)`
+
+`$> docker rmi -f $(docker ps -qa)`
 
 To check if everything is running right, just type localhost or your ip (ifconfig should get your ip for you) in your host's web browser. You should see "Welcome to nginx ... !". 
 
